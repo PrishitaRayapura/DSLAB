@@ -1,0 +1,41 @@
+# -------------------------------
+# R Calculator Application Script
+# -------------------------------
+
+# Create R objects (operands)
+num1 <- 25
+num2 <- 5
+
+# Perform operations
+add <- num1 + num2
+sub <- num1 - num2
+mul <- num1 * num2
+div <- num1 / num2
+mod <- num1 %% num2
+expn <- num1 ^ num2
+
+# Use mathematical functions
+square_root <- sqrt(num1)
+log_value <- log(num1)
+sin_value <- sin(num1)
+
+# Display results
+cat("Addition:", add, "\n")
+cat("Subtraction:", sub, "\n")
+cat("Multiplication:", mul, "\n")
+cat("Division:", div, "\n")
+cat("Modulus:", mod, "\n")
+cat("Exponent:", expn, "\n")
+cat("Square Root:", square_root, "\n")
+cat("Logarithm:", log_value, "\n")
+cat("Sine Value:", sin_value, "\n")
+
+# Save the results to a file
+save(add, sub, mul, div, mod, expn, square_root, log_value, sin_value,
+     file = "C:/Users/<user name>/Documents/R_Calculator_Objects.RData")
+
+cat("All R objects have been saved successfully in disk.\n")
+
+load("C:/Users/<user name>/Documents/R_Calculator_Objects.RData")
+ls()   # List all objects loaded
+
