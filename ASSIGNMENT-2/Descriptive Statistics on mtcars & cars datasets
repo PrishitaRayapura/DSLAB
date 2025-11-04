@@ -1,0 +1,37 @@
+descriptive_stats.R
+
+# --- Descriptive Statistics on mtcars and cars datasets ---
+
+# Load built-in datasets
+data(mtcars)
+data(cars)
+
+# Structure of datasets
+str(mtcars)
+str(cars)
+
+# Summary statistics
+summary(mtcars)
+summary(cars)
+
+# Quartiles
+quantile(mtcars$mpg)
+quantile(cars$speed)
+
+# Mean
+mean(mtcars$mpg)
+mean(cars$speed)
+
+# Median
+median(mtcars$mpg)
+median(cars$speed)
+
+# Mode function (custom, since R has no built-in mode)
+get_mode <- function(x) {
+  uniq <- unique(x)
+  uniq[which.max(tabulate(match(x, uniq)))]
+}
+
+# Mode of columns
+get_mode(mtcars$cyl)
+get_mode(cars$dist)
