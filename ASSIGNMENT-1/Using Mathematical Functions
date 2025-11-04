@@ -1,0 +1,7 @@
+sqrt(25)      # square root
+log(10)       # natural log
+log10(100)    # log base 10
+exp(2)        # exponential e^2
+sin(pi/2)     # sine
+cos(pi)       # cosine
+tan(pi/4)     # tangent
