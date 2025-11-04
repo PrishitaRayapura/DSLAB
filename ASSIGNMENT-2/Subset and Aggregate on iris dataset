@@ -1,0 +1,20 @@
+subset_aggregate.R
+
+# --- Subset and Aggregate on iris dataset ---
+
+# Load dataset
+data(iris)
+
+# View structure
+str(iris)
+
+# Subset where Sepal.Length > 5
+subset_data <- subset(iris, Sepal.Length > 5)
+print(subset_data)
+
+# Aggregate: Find mean Sepal.Length for each Species
+agg_data <- aggregate(Sepal.Length ~ Species, data = iris, FUN = mean)
+print(agg_data)
+
+# Another example - average Petal.Width by Species
+aggregate(Petal.Width ~ Species, data = iris, FUN = mean)
