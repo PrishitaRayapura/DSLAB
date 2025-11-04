@@ -1,0 +1,11 @@
+Save both .R files (say in C:/R_Programs/)
+
+In R console, set working directory:
+
+setwd("C:/R_Programs/")
+
+
+Then run:
+
+source("descriptive_stats.R")
+source("subset_aggregate.R")
